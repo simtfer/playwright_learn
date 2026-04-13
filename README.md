@@ -9,14 +9,16 @@
 npm install
 ```
 
-### 2. 安装浏览器
+### 2. Git LFS 设置（如果未配置）
 ```bash
-# 安装 Chromium 浏览器（约 200 MB）
-npx playwright install chromium
+# 确保已安装 Git LFS
+git lfs install
 
-# 或者安装所有浏览器（Chrome, Firefox, WebKit）
-# npx playwright install
+# 拉取浏览器包（已通过 Git LFS 管理）
+git lfs pull
 ```
+
+> **注意**：项目已包含 Chromium 浏览器包，无需手动安装
 
 ### 3. 运行测试
 ```bash
@@ -40,10 +42,13 @@ npm run test:report
 
 ```
 playwright_learn/
-├── README.md              # 项目说明文档
+├── README.md              # 项目说明文档（已更新）
 ├── package.json           # 项目配置 + 脚本命令
+├── package-lock.json      # 依赖锁定文件（已提交）
 ├── playwright.config.js   # Playwright 配置
-├── .gitignore            # Git 忽略文件
+├── .gitignore            # Git 忽略文件（已修复）
+├── .gitattributes        # Git LFS 配置
+├── ms-playwright.zip     # Chromium 浏览器包（Git LFS）
 └── tests/
     └── example.spec.js   # 示例测试用例
 ```
@@ -62,7 +67,7 @@ playwright_learn/
 
 - **Playwright**: 现代浏览器自动化测试框架
 - **Node.js**: JavaScript 运行时
-- **Chromium**: 浏览器引擎（自动下载，无需提交到仓库）
+- **Chromium**: 浏览器引擎（已通过 Git LFS 提交到仓库）
 - **GitHub Actions**: CI/CD 集成（待配置）
 
 ## 📚 学习资源
