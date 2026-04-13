@@ -11,7 +11,11 @@ npm install
 
 ### 2. 安装浏览器
 ```bash
+# 安装 Chromium 浏览器（约 200 MB）
 npx playwright install chromium
+
+# 或者安装所有浏览器（Chrome, Firefox, WebKit）
+# npx playwright install
 ```
 
 ### 3. 运行测试
@@ -58,7 +62,7 @@ playwright_learn/
 
 - **Playwright**: 现代浏览器自动化测试框架
 - **Node.js**: JavaScript 运行时
-- **Chromium**: 浏览器引擎
+- **Chromium**: 浏览器引擎（自动下载，无需提交到仓库）
 - **GitHub Actions**: CI/CD 集成（待配置）
 
 ## 📚 学习资源
